@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
 import photo from '../../../assets/images/myPhoto.webp';
-import square from '../../../assets/images/icon-square.svg'
-import figureFon from '../../../assets/images/figureFon.svg';
+import iconSquare from '../../../assets/images/icon-square.svg'
+import figure from '../../../assets/images/figureFon.svg';
 import quotes from '../../../assets/images/quotes.svg'
+import points from '../../../assets/images/pointsFon.svg'
+import square from '../../../assets/images/squareFon.svg'
 import {FlexWrapper} from '../../../components/FlexWrapper';
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
@@ -40,6 +42,20 @@ const StyledMain = styled.section`
   min-height: 100vh;
   display: flex;
   height: 100%;
+
+  &::before {
+    content: "";
+    background-image: url(${square});
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 3%;
+    right: 1%;
+    z-index: -1;
+  }
 `
 const PhotoWrapper = styled.div`
   position: relative;
@@ -49,16 +65,29 @@ const PhotoWrapper = styled.div`
 
   &::before {
     content: "";
-    background-image: url(${figureFon});
+    background-image: url(${figure});
     background-repeat: no-repeat;
     background-size: cover;
     display: inline-block; 
-    width: 50%; 
-    height: 40%;
+    width: 45%; 
+    height: 36%;
     position: absolute;
-    top: 45%;
-    left: -13%;
+    top: 40%;
+    left: -11%;
     z-index: -1;
+  }
+
+  &::after {
+    content: ""; /* Обязательное свойство для отображения псевдоэлемента */
+    display: inline-block; /* Иконка будет отображаться в виде блока, чтобы можно было управлять ее размерами */
+    width: 21%;
+    height: 16.5%;
+    background-image: url(${points});
+    background-size: cover; /* Размер изображения будет подстраиваться под размеры псевдоэлемента */
+    position: absolute;
+    bottom: 15%;
+    right: 11%;
+    z-index: 1;
   }
 `
 const Photo = styled.img`
@@ -104,7 +133,7 @@ const UnderPhoto = styled.span`
     display: inline-block; /* Иконка будет отображаться в виде блока, чтобы можно было управлять ее размерами */
     width: 14px; /* Ширина иконки */
     height: 14px; /* Высота иконки */
-    background-image: url(${square});
+    background-image: url(${iconSquare});
     background-size: cover; /* Размер изображения будет подстраиваться под размеры псевдоэлемента */
     margin-right: 5px; /* Расстояние между иконкой и текстом */
   }

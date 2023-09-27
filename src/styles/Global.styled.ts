@@ -22,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   a {
     text-decoration: none;
+    color: ${theme.colors.font};
   }
   ul {
     list-style: none;
@@ -30,4 +31,13 @@ export const GlobalStyle = createGlobalStyle`
     background-color: unset;
     border: none;
   }
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
 `
+

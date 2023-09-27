@@ -6,6 +6,8 @@ export const SectionTitle = styled.h2`
   font-size: 32px;
   font-weight: 500;
   position: relative;
+  margin: 30px 0;
+  
   &::before {
     content: "#";
     display: inline-block;
@@ -20,7 +22,7 @@ export const SectionTitle = styled.h2`
     width: 30%;
     background-color: ${theme.colors.accent};
     position: absolute;
-    left: 160px;
+    left: 17%;
     top: 50%;
   }
 `

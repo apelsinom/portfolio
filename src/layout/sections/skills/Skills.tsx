@@ -15,8 +15,6 @@ export const Skills = () => {
                 <SectionTitle>skills</SectionTitle>
                 <FlexWrapper>
                     <FonWrapper>
-                        <PointsLeft src={points} alt=""/>
-                        <PointsRight src={points} alt=""/>
                         <Figure src={figure} alt=""/>
                         <SquareLittle src={square} alt=""/>
                         <SquareBig src={square} alt=""/>
@@ -58,42 +56,55 @@ const StyledSkills = styled.section`
 const FonWrapper = styled.div`
   position: relative;
   width: 40%;
+
+  &::before {
+    content: ""; /* Обязательное свойство для отображения псевдоэлемента */
+    display: inline-block; /* Иконка будет отображаться в виде блока, чтобы можно было управлять ее размерами */
+    min-width: 70px; /* Ширина иконки */
+    min-height: 70px;
+    background-image: url(${points});
+    background-size: cover; /* Размер изображения будет подстраиваться под размеры псевдоэлемента */
+    position: absolute;
+    top: 50px;
+    left: 30px;
+  }
+
+  &::after {
+    content: ""; /* Обязательное свойство для отображения псевдоэлемента */
+    display: inline-block; /* Иконка будет отображаться в виде блока, чтобы можно было управлять ее размерами */
+    min-width: 70px; /* Ширина иконки */
+    min-height: 70px;
+    background-image: url(${points});
+    background-size: cover; /* Размер изображения будет подстраиваться под размеры псевдоэлемента */
+    position: absolute;
+    top: 150px;
+    left: 200px;
+  }
 `
-const SkillWrapper =styled.div`
+const SkillWrapper = styled.div`
   display: flex;
   width: 60%;
-  
+
   div {
     width: 95%;
   }
 `
-const PointsLeft = styled.img`
-  width: 13%;
-  position: absolute;
-  top: 50px;
-  left: 30px;
-`
-const PointsRight = styled.img`
-  width: 13%;
-  position: absolute;
-  top: 150px;
-  left: 200px;
-`
+
 const Figure = styled.img`
-  width: 25%;
+  width: 30%;
   position: absolute;
   top: 200px;
   left: 50px;
 `
 const SquareLittle = styled.img`
-  width: 10%;
+  width: 15%;
   position: absolute;
   top: 200px;
   left: 300px;
 `
 const SquareBig = styled.img`
-  width: 18%;
+  width: 25%;
   position: absolute;
-  top: 10px;
+  top: 0;
   left: 250px;
 `

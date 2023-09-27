@@ -25,7 +25,6 @@ const StyledSkill = styled.div`
 `
 const SkillTitle = styled.h3`
   display: inline;
-  font-size: 20px;
   margin-left: 5px;
   vertical-align: top;
   word-wrap: break-word;
@@ -33,9 +32,6 @@ const SkillTitle = styled.h3`
 `
 const SkillText = styled.p`
   border-top: 1px solid ${theme.colors.font};
-  font-size: 16px;
-  font-weight: 400;
-  word-wrap: break-word;
   line-height: 1.5;
   padding: 5px;
 `

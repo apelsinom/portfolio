@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
+import {Link} from "../../../../components/Link";
+import {theme} from "../../../../styles/Theme";
 
 type WorkPropsType = {
     src: string
@@ -19,9 +21,10 @@ export const Work = (props: WorkPropsType) => {
 };
 
 const StyledWork = styled.div`
-  background-color: rgba(243, 241, 192, 0.85);
   max-width: 540px;
   width: 100%;
+  margin: 5px;
+  border: 1px solid ${theme.colors.font};
 `
 const Image = styled.img`
   width: 100%;
@@ -29,11 +32,13 @@ const Image = styled.img`
   object-fit: cover;
 `
 const Title = styled.h3`
-
+  border-top: 1px solid ${theme.colors.font};
+  border-bottom: 1px solid ${theme.colors.font};
+  padding: 10px;
+  color: ${theme.colors.fonthover};
 `
 const Text = styled.p`
-
-`
-const Link = styled.a`
-
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px;
 `
