@@ -19,9 +19,10 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-  margin: 10px;
   border: 1px solid ${theme.colors.font};
-  
+  & + & {
+    margin-top: 10px;
+  }
 `
 const SkillTitle = styled.h3`
   display: inline;
@@ -32,6 +33,6 @@ const SkillTitle = styled.h3`
 `
 const SkillText = styled.p`
   border-top: 1px solid ${theme.colors.font};
-  line-height: 1.5;
+  line-height: 1.6;
   padding: 5px;
 `

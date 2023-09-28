@@ -9,6 +9,7 @@ import square from '../../../assets/images/squareFon.svg'
 import {FlexWrapper} from '../../../components/FlexWrapper';
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import {Button} from "../../../components/Button";
 
 export const Main = () => {
     return (
@@ -20,6 +21,7 @@ export const Main = () => {
                         <SmallText>Hi!</SmallText>
                         <Name>Sergey is a</Name> <MainTitle>Web Developer</MainTitle>
                         <Description>I'm not a magician, I'm just learning</Description>
+                        <Button type={'submit'}>Contact me!!</Button>
                     </div>
                     <FlexWrapper direction={'column'} justify={'center'}>
                         <PhotoWrapper>
@@ -42,6 +44,7 @@ const StyledMain = styled.section`
   min-height: 100vh;
   display: flex;
   height: 100%;
+  position: relative;
 
   &::before {
     content: "";
@@ -49,12 +52,11 @@ const StyledMain = styled.section`
     background-repeat: no-repeat;
     background-size: cover;
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
     position: absolute;
-    bottom: 3%;
-    right: 1%;
-    z-index: -1;
+    bottom: 30px;
+    right: 0;
   }
 `
 const PhotoWrapper = styled.div`
@@ -113,7 +115,7 @@ const Name = styled.h2`
   font-weight: 600;
 `
 const Description = styled.p`
-  margin-top: 30px;
+  margin: 30px 0;
   font-size: 16px;
   font-weight: 400;
 `
@@ -151,7 +153,7 @@ const Quote = styled.blockquote`
     background-size: cover; /* Размер изображения будет подстраиваться под размеры псевдоэлемента */
     position: absolute;
     bottom: 100px;
-    left: 300px;
+    left: 380px;
   }
   &::after {
     content: ""; /* Обязательное свойство для отображения псевдоэлемента */
@@ -174,7 +176,7 @@ const QuoteText = styled.p`
   padding: 20px;
   box-sizing: content-box;
   position: absolute;
-  left: 299px;
+  left: 376px;
   bottom: 51px;
 `
 const QuoteAuthor = styled.span`

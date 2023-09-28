@@ -13,27 +13,27 @@ export const Skills = () => {
         <StyledSkills>
             <Container>
                 <SectionTitle>skills</SectionTitle>
-                <FlexWrapper>
+                <FlexWrapper justify={'space-between'} >
                     <FonWrapper>
                         <Figure src={figure} alt=""/>
                         <SquareLittle src={square} alt=""/>
                         <SquareBig src={square} alt=""/>
                     </FonWrapper>
                     <SkillWrapper>
-                        <div>
+                        <BoxColumn>
                             <Skill iconId={'code'}
                                    title={'HTML5'}
                                    description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, '}/>
-                        </div>
-                        <div>
+                        </BoxColumn>
+                        <BoxColumn>
                             <Skill iconId={'css'}
                                    title={'CSS3'}
                                    description={'Lorem ipsum dolor sit amet, '}/>
                             <Skill iconId={'react'}
                                    title={'React'}
                                    description={'Lorem ipsum dolor sit amet, consectetur '}/>
-                        </div>
-                        <div>
+                        </BoxColumn>
+                        <BoxColumn>
                             <Skill iconId={'typescript'}
                                    title={'TypeScript'}
                                    description={'Lorem ipsum dolor sit amet'}/>
@@ -43,7 +43,7 @@ export const Skills = () => {
                             <Skill iconId={'figma'}
                                    title={'Web design'}
                                    description={'Lorem ipsum dolor sit amet, consectetur '}/>
-                        </div>
+                        </BoxColumn>
                     </SkillWrapper>
                 </FlexWrapper>
             </Container>
@@ -52,6 +52,15 @@ export const Skills = () => {
 };
 const StyledSkills = styled.section`
 
+`
+const SkillWrapper = styled.div`
+  display: flex;
+  width: 60%;
+`
+const BoxColumn = styled.div`
+  & + & {
+    margin-left: 10px;
+  }
 `
 const FonWrapper = styled.div`
   position: relative;
@@ -77,19 +86,10 @@ const FonWrapper = styled.div`
     background-image: url(${points});
     background-size: cover; /* Размер изображения будет подстраиваться под размеры псевдоэлемента */
     position: absolute;
-    top: 150px;
+    top: 140px;
     left: 200px;
   }
 `
-const SkillWrapper = styled.div`
-  display: flex;
-  width: 60%;
-
-  div {
-    width: 95%;
-  }
-`
-
 const Figure = styled.img`
   width: 30%;
   position: absolute;

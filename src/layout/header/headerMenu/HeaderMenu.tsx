@@ -39,7 +39,6 @@ const Link = styled.a`
   
   font-size: 28px;
   font-weight: 400;
-  word-wrap: break-word;
   text-align: center;
   color: transparent;
   

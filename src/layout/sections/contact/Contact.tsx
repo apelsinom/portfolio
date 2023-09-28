@@ -27,6 +27,10 @@ const StyledForm = styled.form`
   flex-direction: column;
   gap: 10px;
   margin: 0 auto;
+  
+  ${Button} {
+    display: inline-block;
+  }
 `
 const Field = styled.input`
 
