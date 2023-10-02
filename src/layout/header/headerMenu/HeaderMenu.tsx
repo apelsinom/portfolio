@@ -66,7 +66,8 @@ const Mask = styled.span`
   }
 `
 const  ListItem = styled.li`
-  position: relative; 
+  position: relative;
+  
   
   &::before {
     content: "";
@@ -84,15 +85,19 @@ const  ListItem = styled.li`
   }
   
   &:hover {
+    
     &::before {
       transform: scale(1);
     }
+    
     ${Mask} {
-      transform: skewX(10deg) translateX(3px);
+      transition: transform 0.2s ease;
+      transform: skewX(12deg) translateX(4px);
       color: ${theme.colors.fonthover};
       
       & +  ${Mask} {
-        transform: skewX(10deg) translateX(3px);
+        transition: transform 0.2s ease;
+        transform: skewX(12deg) translateX(4px);
       }
     }
   }

@@ -6,9 +6,12 @@ export const Button = styled.button`
   font-size: 16px;
   font-weight: 500;
   border: 1px solid ${theme.colors.accent};
+  transition: transform 0.3s ease;
   
   &:hover {
-    font-weight: 600;
+    transform: scale(1.1)
   }
-  
+  &:focus-visible {
+    outline: 2px solid ${theme.colors.accent}
+  }
 `

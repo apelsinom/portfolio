@@ -6,7 +6,7 @@ export const SectionTitle = styled.h2`
   font-size: 32px;
   font-weight: 500;
   position: relative;
-  margin: 30px 0;
+  margin: 100px 0 30px;
   
   &::before {
     content: "#";

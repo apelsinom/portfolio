@@ -16,7 +16,7 @@ export const Works = () => {
     return (
         <StyledWorks>
             <Container>
-                <SectionTitle>my works</SectionTitle>
+                <SectionTitle>my-works</SectionTitle>
                 <TabMenu menuItems={worksItems}/>
                 <FlexWrapper align={'flex-start'}>
                     <Work title={'social network'}

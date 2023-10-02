@@ -45,8 +45,8 @@ const StyledAboutMy = styled.section`
   &::before {
     content: ""; /* Обязательное свойство для отображения псевдоэлемента */
     display: inline-block; /* Иконка будет отображаться в виде блока, чтобы можно было управлять ее размерами */
-    min-width: 35px;
-    min-height: 60px;
+    min-width: 65px;
+    min-height: 80px;
     background-image: url(${points});
     background-size: cover; /* Размер изображения будет подстраиваться под размеры псевдоэлемента */
     position: absolute;
@@ -57,13 +57,13 @@ const StyledAboutMy = styled.section`
   &::after {
     content: ""; /* Обязательное свойство для отображения псевдоэлемента */
     display: inline-block; /* Иконка будет отображаться в виде блока, чтобы можно было управлять ее размерами */
-    min-width: 100px;
-    min-height: 100px;
+    min-width: 120px;
+    min-height: 120px;
     background-image: url(${square});
     background-size: cover; /* Размер изображения будет подстраиваться под размеры псевдоэлемента */
     position: absolute;
     bottom: 200px;
-    left: 0;
+    left: -50px;
   }
 `
 const MyTextWrapper = styled.div`
@@ -116,8 +116,10 @@ const DecorWrapper = styled.div`
   &::after {
     content: ""; /* Обязательное свойство для отображения псевдоэлемента */
     display: block; /* Иконка будет отображаться в виде блока, чтобы можно было управлять ее размерами */
+    position: absolute;
     width: 90%;
     height: 2px;
     background-color: ${theme.colors.accent};
+    bottom: 3px;
   }
 `

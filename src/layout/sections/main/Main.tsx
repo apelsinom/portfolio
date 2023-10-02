@@ -15,13 +15,13 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper direction={'column'} >
-                <FlexWrapper align={'center'} justify={'space-between'}>
+                <FlexWrapper direction={'column'} align={'center'}>
+                <MainWrapper>
                     <div>
                         <SmallText>Hi!</SmallText>
                         <Name>Sergey is a</Name> <MainTitle>Web Developer</MainTitle>
                         <Description>I'm not a magician, I'm just learning</Description>
-                        <Button type={'submit'}>Contact me!!</Button>
+                        <Button type={'submit'}>Contact me</Button>
                     </div>
                     <FlexWrapper direction={'column'} justify={'center'}>
                         <PhotoWrapper>
@@ -29,7 +29,7 @@ export const Main = () => {
                         </PhotoWrapper>
                         <UnderPhoto>Currently working on <span>Portfolio</span></UnderPhoto>
                     </FlexWrapper>
-                </FlexWrapper>
+                </MainWrapper>
                 <Quote>
                     <QuoteText>Just do it, don't talk about it.</QuoteText>
                     <QuoteAuthor>- M.Zuckerberg</QuoteAuthor>
@@ -41,6 +41,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
+  margin-top: 80px;
   min-height: 100vh;
   display: flex;
   height: 100%;
@@ -58,6 +59,12 @@ const StyledMain = styled.section`
     bottom: 30px;
     right: 0;
   }
+`
+const MainWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `
 const PhotoWrapper = styled.div`
   position: relative;
@@ -119,11 +126,14 @@ const Description = styled.p`
   font-size: 16px;
   font-weight: 400;
 `
-const UnderPhoto = styled.span`
+const UnderPhoto = styled.div`
   border: 1px solid rgba(171, 178, 191, 1);
   padding: 5px;
   font-size: 16px;
   font-weight: 500;
+  display: inline-block;
+  position: relative;
+  bottom: 4px;
 
   span {
     color: white;
@@ -141,9 +151,15 @@ const UnderPhoto = styled.span`
   }
 `
 const Quote = styled.blockquote`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
   font-size: 20px;
   color: ${theme.colors.fonthover};
   position: relative;
+  margin: 10px;
+  
   &::before {
     content: ""; /* Обязательное свойство для отображения псевдоэлемента */
     display: inline-block; /* Иконка будет отображаться в виде блока, чтобы можно было управлять ее размерами */
@@ -152,8 +168,8 @@ const Quote = styled.blockquote`
     background-image: url(${quotes});
     background-size: cover; /* Размер изображения будет подстраиваться под размеры псевдоэлемента */
     position: absolute;
-    bottom: 100px;
-    left: 380px;
+    top: -7%;
+    left: 3%;
   }
   &::after {
     content: ""; /* Обязательное свойство для отображения псевдоэлемента */
@@ -163,8 +179,8 @@ const Quote = styled.blockquote`
     background-image: url(${quotes});
     background-size: cover; /* Размер изображения будет подстраиваться под размеры псевдоэлемента */
     position: absolute;
-    bottom: 60px;
-    right: 350px;
+    bottom: 35%;
+    right: 3%;
   }
   
 `
@@ -173,11 +189,8 @@ const QuoteText = styled.p`
   font-weight: 500;
   height: 30px;
   display: block;
-  padding: 20px;
+  padding: 20px 30px;
   box-sizing: content-box;
-  position: absolute;
-  left: 376px;
-  bottom: 51px;
 `
 const QuoteAuthor = styled.span`
   border: 1px solid ${theme.colors.font};
@@ -187,6 +200,4 @@ const QuoteAuthor = styled.span`
   display: inline-block;
   padding: 10px;
   box-sizing: content-box;
-  position: relative;
-  margin-left: 535px;
 `

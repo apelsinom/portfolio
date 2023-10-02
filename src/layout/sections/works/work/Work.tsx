@@ -60,6 +60,9 @@ const ImageWrapper = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: ${theme.colors.primaryBg};
+    &:hover {
+      transform: scale(1.1) translate(-45%, -45%);
+    }
   }
 `
 const Image = styled.img`

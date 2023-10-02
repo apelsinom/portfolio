@@ -10,6 +10,8 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
+    font-size: 16px;
+    font-weight: 400;
     margin: 0;
     font-family: 'Fira Code', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -23,6 +25,10 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: ${theme.colors.font};
+    cursor: pointer;
+    &:focus-visible {
+      outline: 2px solid ${theme.colors.font};
+    }
   }
   ul {
     list-style: none;
@@ -40,6 +46,10 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     font-weight: 400;
     word-wrap: break-word;
+  }
+  ::selection {
+    background-color: ${theme.colors.font}; /* Изменение цвета фона выделенного текста */
+    color: ${theme.colors.primaryBg}; /* Изменение цвета текста выделенного текста */
   }
 `
 
