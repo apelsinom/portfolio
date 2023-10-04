@@ -67,7 +67,6 @@ const StyledAboutMy = styled.section`
   }
 `
 const MyTextWrapper = styled.div`
-  width: 60%;
 `
 const MyText = styled.div`
   p {
@@ -75,7 +74,7 @@ const MyText = styled.div`
   }
 `
 const MyPhotoWrapper = styled.div`
-  width: 30%;
+  max-width: 200px;
   position: relative;
   z-index: 0;
   

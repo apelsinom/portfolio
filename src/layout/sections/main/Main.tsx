@@ -42,7 +42,7 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   margin-top: 80px;
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   height: 100%;
   position: relative;
@@ -53,10 +53,10 @@ const StyledMain = styled.section`
     background-repeat: no-repeat;
     background-size: cover;
     display: inline-block;
-    min-width: 60px;
-    min-height: 60px;
+    width: 60px;
+    height: 60px;
     position: absolute;
-    bottom: 30px;
+    bottom: 0;
     right: 0;
   }
 `
