@@ -17,11 +17,17 @@ export const TabMenu = (props: {menuItems: Array<string>}) => {
 };
 
 const StyledTabMenu = styled.nav`
-  margin-bottom: 40px;
+  margin-bottom: 3%;
   ul {
     display: flex;
-    gap: 40px;
-    justify-content: end;
+    gap: 5%;
+    justify-content: flex-end;
+    width: 100%;
+    
+    @media screen and (max-width: 400px) {
+      justify-content: center;
+      gap: 3%;
+    }
   }
 `
 const ListItem = styled.li`

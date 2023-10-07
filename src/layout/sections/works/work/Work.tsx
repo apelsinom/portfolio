@@ -26,12 +26,12 @@ export const Work = (props: WorkPropsType) => {
 };
 
 const StyledWork = styled.div`
-  max-width: 540px;
-  width: 100%;
+  width: 268px;
   border: 1px solid ${theme.colors.font};
-
-  & + & {
-    margin-left: 10px;
+  flex-grow: 1;
+  
+  @media ${theme.media.desktop} {
+    max-width: 360px;
   }
 `
 const ImageWrapper = styled.div`

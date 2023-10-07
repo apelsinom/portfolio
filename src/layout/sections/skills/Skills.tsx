@@ -7,6 +7,7 @@ import {Container} from "../../../components/Container";
 import points from '../../../assets/images/pointsFon.svg';
 import figure from '../../../assets/images/figureFon.svg';
 import square from '../../../assets/images/squareFon.svg';
+import {theme} from "../../../styles/Theme";
 
 export const Skills = () => {
     return (
@@ -58,16 +59,35 @@ const StyledSkills = styled.section`
 const SkillWrapper = styled.div`
   display: flex;
   width: 60%;
+  
+  gap: 10px;
+
+  @media ${theme.media.tablet} {
+    width: 100%;
+  }
+  
+  @media ${theme.media.mobile} {
+    width: 60%;
+    flex-direction: column;
+    margin: 0 auto;
+  }
 `
 const BoxColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   flex: 1;
   & + & {
-    margin-left: 10px;
+    //margin-left: 10px;
   }
 `
 const FonWrapper = styled.div`
   position: relative;
   width: 40%;
+  
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `
 const PointsLeft = styled.img`
   width: 15%; 
@@ -78,7 +98,7 @@ const PointsLeft = styled.img`
 const PointsRight = styled.img`
   width: 15%;
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
 `
 const Figure = styled.img`

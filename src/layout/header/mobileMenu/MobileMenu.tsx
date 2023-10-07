@@ -38,8 +38,6 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
                             <SocialList/>
                         </SocialListWrapper>
                     </MobileMenuSection>
-
-
                 </FlexWrapper>
             </MobileMenuPopup>
         </StyleMobileMenu>
@@ -62,6 +60,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   right: 0;
   z-index: 888;
   display: none;
+  height: 100vh;
 
   ${props => props.isOpen && css<{ isOpen: boolean }>`
     display: flex;
@@ -70,11 +69,12 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   `}
   ${FlexWrapper} {
     margin-left: 10%;
+    height: 100%;
   }
 `
 const MobileMenuSection = styled.ul`
   display: flex;
-  gap: 10%;
+  gap: 8%;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;

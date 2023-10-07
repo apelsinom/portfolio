@@ -16,24 +16,24 @@ export const Main = () => {
         <StyledMain>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'}>
-                <MainWrapper>
-                    <div>
-                        <SmallText>Hi!</SmallText>
-                        <Name>Sergey is a</Name> <MainTitle>Web Developer</MainTitle>
-                        <Description>I'm not a magician, I'm just learning</Description>
-                        <Button type={'submit'}>Contact me</Button>
-                    </div>
-                    <FlexWrapper direction={'column'} justify={'center'}>
-                        <PhotoWrapper>
-                            <Photo src={photo} alt=""/>
-                        </PhotoWrapper>
-                        <UnderPhoto>Currently working on <span>Portfolio</span></UnderPhoto>
-                    </FlexWrapper>
-                </MainWrapper>
-                <Quote>
-                    <QuoteText>Just do it, don't talk about it.</QuoteText>
-                    <QuoteAuthor>- M.Zuckerberg</QuoteAuthor>
-                </Quote>
+                    <MainWrapper>
+                        <div>
+                            <SmallText>Hi!</SmallText>
+                            <Name>Sergey is a</Name> <MainTitle>Web Developer</MainTitle>
+                            <Description>I'm not a magician, I'm just learning</Description>
+                            <Button type={'submit'}>Contact me</Button>
+                        </div>
+                        <FlexWrapper direction={'column'} justify={'center'}>
+                            <PhotoWrapper>
+                                <Photo src={photo} alt=""/>
+                            </PhotoWrapper>
+                            <UnderPhoto>Currently working on <span>Portfolio</span></UnderPhoto>
+                        </FlexWrapper>
+                    </MainWrapper>
+                    <Quote>
+                        <QuoteText>Just do it, don't talk about it.</QuoteText>
+                        <QuoteAuthor>- M.Zuckerberg</QuoteAuthor>
+                    </Quote>
                 </FlexWrapper>
             </Container>
         </StyledMain>
@@ -58,6 +58,10 @@ const StyledMain = styled.section`
     position: absolute;
     bottom: 0;
     right: 0;
+
+    @media ${theme.media.tablet} {
+      display: none;
+    }
   }
 `
 const MainWrapper = styled.div`
@@ -65,6 +69,16 @@ const MainWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media ${theme.media.mobile} {
+    justify-content: center;
+    flex-wrap: wrap;
+
+    ${Button} {
+      display: none;
+    }
+  }
+
 `
 const PhotoWrapper = styled.div`
   position: relative;
@@ -77,12 +91,12 @@ const PhotoWrapper = styled.div`
     background-image: url(${figure});
     background-repeat: no-repeat;
     background-size: cover;
-    display: inline-block; 
-    width: 45%; 
+    display: inline-block;
+    width: 45%;
     height: 36%;
     position: absolute;
     top: 40%;
-    left: -11%;
+    left: -8%;
     z-index: -1;
   }
 
@@ -100,9 +114,12 @@ const PhotoWrapper = styled.div`
   }
 `
 const Photo = styled.img`
-  //width: 350px;
   height: 400px;
   object-fit: cover;
+
+    // @media ${theme.media.mobile} {
+  //   height: 300px;
+  // }
 `
 const SmallText = styled.span`
   display: block;
@@ -125,6 +142,10 @@ const Description = styled.p`
   margin: 30px 0;
   font-size: 16px;
   font-weight: 400;
+
+  @media ${theme.media.mobile} {
+    margin: 10px 0;
+  }
 `
 const UnderPhoto = styled.div`
   border: 1px solid rgba(171, 178, 191, 1);
@@ -159,7 +180,11 @@ const Quote = styled.blockquote`
   color: ${theme.colors.fonthover};
   position: relative;
   margin: 10px;
-  
+
+  @media ${theme.media.mobile} {
+    display: none;
+  }
+
   &::before {
     content: ""; /* Обязательное свойство для отображения псевдоэлемента */
     display: inline-block; /* Иконка будет отображаться в виде блока, чтобы можно было управлять ее размерами */
@@ -171,6 +196,7 @@ const Quote = styled.blockquote`
     top: -7%;
     left: 3%;
   }
+
   &::after {
     content: ""; /* Обязательное свойство для отображения псевдоэлемента */
     display: inline-block; /* Иконка будет отображаться в виде блока, чтобы можно было управлять ее размерами */
@@ -182,7 +208,7 @@ const Quote = styled.blockquote`
     bottom: 35%;
     right: 3%;
   }
-  
+
 `
 const QuoteText = styled.p`
   border: 1px solid ${theme.colors.font};

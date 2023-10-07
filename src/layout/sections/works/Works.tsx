@@ -18,7 +18,7 @@ export const Works = () => {
             <Container>
                 <SectionTitle>my-works</SectionTitle>
                 <TabMenu menuItems={worksItems}/>
-                <FlexWrapper align={'flex-start'}>
+                <FlexWrapper align={'flex-start'} wrap={'wrap'} justify={'center'}>
                     <Work title={'social network'}
                           src={socialImg}
                           text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'}/>
@@ -36,6 +36,9 @@ export const Works = () => {
 
 const StyledWorks = styled.section`
   position: relative;
+  ${FlexWrapper} {
+    gap: 10px;
+  }
 
   &::before {
     content: "";
@@ -48,5 +51,10 @@ const StyledWorks = styled.section`
     position: absolute;
     bottom: 200px;
     right: 0;
+
+    @media screen and (max-width: 1200px){
+      display: none;
+    }
   }
+  
 `

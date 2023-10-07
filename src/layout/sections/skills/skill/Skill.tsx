@@ -21,7 +21,7 @@ export const Skill = (props: SkillPropsType) => {
 const StyledSkill = styled.div`
   border: 1px solid ${theme.colors.font};
   & + & {
-    margin-top: 10px;
+    //margin-top: 10px;
   }
 `
 const SkillTitle = styled.h3`
@@ -30,6 +30,10 @@ const SkillTitle = styled.h3`
   vertical-align: top;
   word-wrap: break-word;
   padding: 3px;
+  
+  @media screen and (min-width: 769px) and (max-width: 845px) {
+    font-size: 17px;
+  }
 `
 const SkillText = styled.p`
   border-top: 1px solid ${theme.colors.font};
