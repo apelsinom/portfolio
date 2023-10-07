@@ -37,22 +37,6 @@ const StyledWork = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
 
-  &:hover {
-    ${Button} {
-      opacity: 1;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(3px);
-    }
-  }
-  
   ${Button} {
     opacity: 0;
     position: absolute;
@@ -62,6 +46,39 @@ const ImageWrapper = styled.div`
     background-color: ${theme.colors.primaryBg};
     &:hover {
       transform: scale(1.1) translate(-45%, -45%);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+  }
+  
+  &:hover {
+
+    &::before {
+      opacity: 1;
+    }
+    
+    ${Button} {
+      opacity: 1;
+    }
+  }
+  
+  @media ${theme.media.tablet} {
+    &::before {
+      opacity: 1;
+    }
+
+    ${Button} {
+      opacity: 1;
     }
   }
 `
