@@ -137,13 +137,13 @@ const SmallText = styled.span`
 const MainTitle = styled.h1`
   display: inline-block;
   color: ${theme.colors.accent};
-  font-size: 32px;
+  font-size: 31px;
   font-weight: 600;
 `
 const Name = styled.h2`
   display: inline-block;
   color: white;
-  font-size: 32px;
+  font-size: 31px;
   font-weight: 600;
 `
 const Description = styled.p`
