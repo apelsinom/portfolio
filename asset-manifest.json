@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.31d6cfe0.css",
+    "main.js": "/portfolio/static/js/main.aa5479c1.js",
+    "static/js/787.25eaef86.chunk.js": "/portfolio/static/js/787.25eaef86.chunk.js",
+    "static/media/Proj-2.webp": "/portfolio/static/media/Proj-2.4d64f5979ecbcf2d1d12.webp",
+    "static/media/myPhoto.webp": "/portfolio/static/media/myPhoto.979b765751e5839c16a4.webp",
+    "static/media/Proj-1.webp": "/portfolio/static/media/Proj-1.6e651cfda8ea8c6aefe0.webp",
+    "static/media/myPhotoSecond.webp": "/portfolio/static/media/myPhotoSecond.3dc6a8e0b05892d7e396.webp",
+    "static/media/Proj-3.webp": "/portfolio/static/media/Proj-3.680a1f981a2757ede503.webp",
+    "static/media/icons-sprite.svg": "/portfolio/static/media/icons-sprite.c5c10e5ffee507860b1ec4a4745a278d.svg",
+    "static/media/figureFon.svg": "/portfolio/static/media/figureFon.4c2626ff145e43e16f62104a4bb898ad.svg",
+    "static/media/pointsFon.svg": "/portfolio/static/media/pointsFon.6e33fd923b2a31d9872d96e676985fdd.svg",
+    "index.html": "/portfolio/index.html",
+    "static/media/quotes.svg": "/portfolio/static/media/quotes.a76fc53a57df8a2f038f4e756fae26fa.svg",
+    "static/media/icon-square.svg": "/portfolio/static/media/icon-square.d6e7739a3697b52ff3ca16bae16d9b81.svg",
+    "static/media/squareFon.svg": "/portfolio/static/media/squareFon.5ded3b65d7f216c31b67008e185503f3.svg",
+    "main.aa5479c1.js.map": "/portfolio/static/js/main.aa5479c1.js.map",
+    "787.25eaef86.chunk.js.map": "/portfolio/static/js/787.25eaef86.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.aa5479c1.js"
+  ]
+}
