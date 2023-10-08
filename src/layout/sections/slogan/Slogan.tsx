@@ -29,13 +29,13 @@ const StyledSlogan = styled.section`
     width: 100%;
     height: 2px;
     background-color: ${theme.colors.font};
-    bottom: -15%;
+    bottom: -20%;
   }
 `
 const Title = styled.h2`
   ${font({weight: 500, color: 'white', Fmax: 32, Fmin: 16})};
   position: relative;
-  margin: 10% 0;
+  margin: 7% 0;
   
   &:after {
     content: "";

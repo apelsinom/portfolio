@@ -21,8 +21,6 @@ const StyledFooter = styled.footer`
 `
 const Name = styled.span`
   ${font({weight: 600, Fmax: 22, Fmin: 16})};
-  font-weight: 600;
-  font-size: 22px;
   letter-spacing: 3px;
 `
 const Copyright = styled.small`

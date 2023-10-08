@@ -15,7 +15,7 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
                 <span></span>
             </BurgerButton>
             <MobileMenuPopup isOpen={menuIsOpen}>
-                <FlexWrapper direction={'column'}>
+                <FlexWrapper direction={'column'} justify={'center'} align={'center'}>
                     <MobileMenuSection>
                         {props.menuItems.map((item, index) => {
                             return <ListItem key={index}>
@@ -34,10 +34,11 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
                                 </Link>
                             </ListItem>
                         })}
-                        <SocialListWrapper>
-                            <SocialList/>
-                        </SocialListWrapper>
+
                     </MobileMenuSection>
+                    <SocialListWrapper>
+                        <SocialList/>
+                    </SocialListWrapper>
                 </FlexWrapper>
             </MobileMenuPopup>
         </StyleMobileMenu>
@@ -60,30 +61,26 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   right: 0;
   z-index: 888;
   display: none;
-  height: 100vh;
+  
 
   ${props => props.isOpen && css<{ isOpen: boolean }>`
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
   `}
   ${FlexWrapper} {
-    margin-left: 10%;
-    height: 100%;
+    gap: 50px;
   }
 `
 const MobileMenuSection = styled.ul`
   display: flex;
-  gap: 8%;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 100%;
-  min-width: 375px;
-  width: 100%;
+  gap: 40px;
 `
 const SocialListWrapper = styled.div`
-  transform: translateX(50px) scale(1.5);
+  transform: translateX(5%) scale(1.5);
 `
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: relative;
