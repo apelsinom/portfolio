@@ -77,9 +77,6 @@ const BoxColumn = styled.div`
   flex-direction: column;
   gap: 10px;
   flex: 1;
-  & + & {
-    //margin-left: 10px;
-  }
 `
 const FonWrapper = styled.div`
   position: relative;

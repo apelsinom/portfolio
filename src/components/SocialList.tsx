@@ -32,7 +32,7 @@ export const SocialList = () => {
 const StyledSocialList = styled.ul`
   display: flex;
   gap: 20px;
-  margin: 20px 0;
+  margin: 2% 0;
   flex-direction: row;
 `
 const SocialItem = styled.li`

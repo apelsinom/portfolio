@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Button} from "../../../components/Button";
 import {Container} from "../../../components/Container";
 import photoSecond from "../../../assets/images/myPhotoSecond.webp";
@@ -14,7 +13,7 @@ export const AboutMe = () => {
         <StyledAboutMy>
             <Container>
                 <SectionTitle>about-me</SectionTitle>
-                <FlexWrapper align={'center'} justify={'space-between'}>
+                <AboutWrapper>
                     <MyTextWrapper>
                         <MyText>
                             <p>Hello, i’m Sergey!</p>
@@ -33,7 +32,7 @@ export const AboutMe = () => {
                             <PhotoSecond src={photoSecond} alt=""/>
                         </DecorWrapper>
                     </MyPhotoWrapper>
-                </FlexWrapper>
+                </AboutWrapper>
             </Container>
         </StyledAboutMy>
     );
@@ -41,6 +40,7 @@ export const AboutMe = () => {
 
 const StyledAboutMy = styled.section`
   position: relative;
+  width: 100%;
 
   &::before {
     content: ""; /* Обязательное свойство для отображения псевдоэлемента */
@@ -50,8 +50,12 @@ const StyledAboutMy = styled.section`
     background-image: url(${points});
     background-size: cover; /* Размер изображения будет подстраиваться под размеры псевдоэлемента */
     position: absolute;
-    bottom: 100px;
+    bottom: 150px;
     right: 0;
+
+    @media screen and (max-width: 1220px){
+      display: none;
+    }
   }
   
   &::after {
@@ -64,53 +68,79 @@ const StyledAboutMy = styled.section`
     position: absolute;
     bottom: 200px;
     left: -50px;
+
+    @media screen and (max-width: 1220px){
+      display: none;
+    }
+  }
+`
+const AboutWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  
+  //     ${Button} {
+  //       display: none;
+  //     }
+  //   }
   }
 `
 const MyTextWrapper = styled.div`
+    max-width: 642px;
+    width: 328px;
+    flex-grow: 1;
 `
 const MyText = styled.div`
   p {
-    margin-bottom: 40px;
+    margin-bottom: 5%;
   }
 `
 const MyPhotoWrapper = styled.div`
-  max-width: 200px;
+  align-self: flex-end;
+  max-width: 428px;
+  width: 219px;
   position: relative;
   z-index: 0;
+  flex-grow: 1;
   
   &::before {
     content: ""; /* Обязательное свойство для отображения псевдоэлемента */
     display: inline-block; /* Иконка будет отображаться в виде блока, чтобы можно было управлять ее размерами */
-    min-width: 60px;
-    min-height: 60px;
+    width: 20%;
+    height: 19%;
     background-image: url(${points});
     background-size: cover; /* Размер изображения будет подстраиваться под размеры псевдоэлемента */
     position: absolute;
-    bottom: 180px;
-    right: 230px;
+    bottom: 40%;
+    left: 5%;
     z-index: 1;
   }
 
   &::after {
     content: ""; /* Обязательное свойство для отображения псевдоэлемента */
     display: inline-block; /* Иконка будет отображаться в виде блока, чтобы можно было управлять ее размерами */
-    min-width: 60px;
-    min-height: 35px;
+    width: 16%;
+    height: 9%;
     background-image: url(${points});
     background-size: cover; /* Размер изображения будет подстраиваться под размеры псевдоэлемента */
     position: absolute;
-    bottom: 60px;
+    bottom: 15%;
     right: 0;
     z-index: 1;
   }
 `
 const PhotoSecond = styled.img`
-  height: 350px;
+  width: 100%;
   object-fit: cover;
+  
 `
 const DecorWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
   position: relative;
   z-index: 0;
+  width: 100%;
   
   &::after {
     content: ""; /* Обязательное свойство для отображения псевдоэлемента */
@@ -119,6 +149,7 @@ const DecorWrapper = styled.div`
     width: 90%;
     height: 2px;
     background-color: ${theme.colors.accent};
-    bottom: 3px;
+    bottom: 0;
+    right: 10%;
   }
 `

@@ -41,6 +41,10 @@ const StyledContact = styled.section`
     position: absolute;
     bottom: 100px;
     left: 0;
+    
+    @media ${theme.media.tablet} {
+      display: none;
+    }
   }
 `
 const StyledForm = styled.form`
@@ -57,7 +61,6 @@ const StyledForm = styled.form`
 
   ${Button} {
     align-self: flex-start;
-    //display: inline-block;
   }
 
   textarea {

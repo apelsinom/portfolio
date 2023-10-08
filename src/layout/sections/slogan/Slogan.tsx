@@ -4,6 +4,7 @@ import {Button} from "../../../components/Button";
 import {theme} from "../../../styles/Theme";
 import {Container} from "../../../components/Container";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {font} from "../../../styles/Common";
 
 export const Slogan = () => {
     return (
@@ -32,11 +33,9 @@ const StyledSlogan = styled.section`
   }
 `
 const Title = styled.h2`
-  color: ${theme.colors.fonthover};
-  font-size: 32px;
-  font-weight: 500;
+  ${font({weight: 500, color: 'white', Fmax: 32, Fmin: 16})};
   position: relative;
-  margin: 100px 0;
+  margin: 10% 0;
   
   &:after {
     content: "";
@@ -46,7 +45,7 @@ const Title = styled.h2`
     background-color: ${theme.colors.accent};
     position: absolute;
     left: 50%;
-    bottom: -30px;
+    bottom: -80%;
     transform: translateX(-50%);
   }
 `

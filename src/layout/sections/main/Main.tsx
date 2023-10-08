@@ -17,18 +17,18 @@ export const Main = () => {
             <Container>
                 <FlexWrapper direction={'column'} align={'center'}>
                     <MainWrapper>
-                        <div>
+                        <MainTextWrapper>
                             <SmallText>Hi!</SmallText>
                             <Name>Sergey is a</Name> <MainTitle>Web Developer</MainTitle>
                             <Description>I'm not a magician, I'm just learning</Description>
                             <Button type={'submit'}>Contact me</Button>
-                        </div>
-                        <FlexWrapper direction={'column'} justify={'center'}>
+                        </MainTextWrapper>
+                        <MainPhotoWrapper>
                             <PhotoWrapper>
                                 <Photo src={photo} alt=""/>
                             </PhotoWrapper>
                             <UnderPhoto>Currently working on <span>Portfolio</span></UnderPhoto>
-                        </FlexWrapper>
+                        </MainPhotoWrapper>
                     </MainWrapper>
                     <Quote>
                         <QuoteText>Just do it, don't talk about it.</QuoteText>
@@ -67,18 +67,30 @@ const StyledMain = styled.section`
 const MainWrapper = styled.div`
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 
   @media ${theme.media.mobile} {
     justify-content: center;
-    flex-wrap: wrap;
 
-    ${Button} {
-      display: none;
-    }
+    // ${Button} {
+    //   display: none;
+    // }
   }
-
+`
+const MainTextWrapper = styled.div`
+  max-width: 470px;
+  width: 241px;
+  flex-grow: 1;
+`
+const MainPhotoWrapper = styled.div`
+  max-width: 320px;
+  width: 306px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
 `
 const PhotoWrapper = styled.div`
   position: relative;
@@ -116,10 +128,6 @@ const PhotoWrapper = styled.div`
 const Photo = styled.img`
   height: 400px;
   object-fit: cover;
-
-    // @media ${theme.media.mobile} {
-  //   height: 300px;
-  // }
 `
 const SmallText = styled.span`
   display: block;
